@@ -1,0 +1,15 @@
+modules = ["python-3.11"]
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "python hello.py"
+author = 19434631
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python hello.py"
